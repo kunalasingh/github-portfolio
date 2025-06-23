@@ -4,47 +4,13 @@ import { cn } from "@/lib/utils";
 import { ExternalLink } from "lucide-react";
 
 import { Card, CardContent } from "@/components/ui/card";
-
-export const projects = [
-  {
-    title: "crwn-clothing (E-commerce Platform)",
-    description:
-      "A full-stack e-commerce solution with React, Node.js, and MongoDB",
-    tech: "React",
-    link: "https://github.com/kunalasingh/crwn-clothing",
-  },
-  {
-    title: "Task Management App",
-    description: "A productivity app built with React Native and Firebase",
-    tech: "React Native",
-    link: "#",
-  },
-  {
-    title: "Data Visualization Dashboard",
-    description: "An interactive dashboard using D3.js and Vue.js",
-    tech: "Vue.js",
-    link: "#",
-  },
-  {
-    title: "AI Chatbot",
-    description:
-      "A machine learning powered chatbot using Python and TensorFlow",
-    tech: "Python",
-    link: "#",
-  },
-];
-
-const techColors = {
-  React: "bg-blue-500",
-  "React Native": "bg-green-500",
-  "Vue.js": "bg-purple-500",
-  Python: "bg-yellow-500",
-};
+import strings, { projects, techColors } from "@/constants/strings";
+const project = strings.project;
 
 export const Projects = () => {
   return (
     <>
-      <h2 className="text-xl font-bold mb-4">Featured Projects</h2>
+      <h2 className="text-xl font-bold mb-4">{project.featuredProjects}</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
         {projects.map((p, i) => (
           <Card key={i}>
@@ -75,7 +41,7 @@ export const Projects = () => {
                     href={p.link}
                     className="flex items-center gap-2 text-sm text-primary hover:underline"
                   >
-                    View Project
+                    {project.viewProject}
                     <ExternalLink className="inline-block size-3" />
                   </Link>
                 </div>

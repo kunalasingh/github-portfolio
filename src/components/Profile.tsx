@@ -9,6 +9,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import ThemeSwitcher from "@/components/ui/ThemeSwitcher";
+import strings from "@/constants/strings";
 
 const socials = [
   {
@@ -48,10 +49,10 @@ export const Profile = () => {
               />
               <div className="flex flex-col items-start justify-center">
                 <h1 className="font-bold md:mt-4 text-xl md:text-2xl">
-                  Kunal Arunkumar Singh
+                  {strings.name}
                 </h1>
                 <p className="text-sm md:text-base text-muted-foreground">
-                  Software Engineer
+                  {strings.role}
                 </p>
               </div>
             </div>
@@ -59,10 +60,7 @@ export const Profile = () => {
           </div>
 
           <p className="mt-2 text-start text-sm text-muted-foreground">
-            I am a software engineer with expertise in frontend development and
-            a proven track record of delivering innovative solutions across the
-            Banking, Education, and Media domains, with aspirations to create
-            transformative tools powered by AI.
+            {strings.summary}
           </p>
           <Button className="mt-4 w-full" asChild>
             {/* TODO: Add resume */}
@@ -72,7 +70,7 @@ export const Profile = () => {
               target="_blank"
               className="font-semibold uppercase"
             >
-              CONTACT ME
+              {strings.contactMe}
             </Link>
           </Button>
           <div className="mt-4 flex flex-col space-y-2 border-t border-border pt-4 w-full">

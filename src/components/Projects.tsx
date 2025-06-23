@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { ExternalLink } from "lucide-react";
 
 import { Card, CardContent } from "@/components/ui/card";
-import strings, { projects, techColors } from "@/constants/strings";
+import strings, { projects, techColors, TechKey } from "@/constants/strings";
 const project = strings.project;
 
 export const Projects = () => {
@@ -30,11 +30,11 @@ export const Projects = () => {
                     <div
                       className={cn(
                         "size-4 rounded-full",
-                        techColors[p.tech as keyof typeof techColors]
+                        techColors[p.tech as TechKey].color
                       )}
                     />
                     <span className="text-xs font-medium text-muted-foreground">
-                      {p.tech}
+                      {techColors[p.tech as TechKey].name}
                     </span>
                   </div>
                   <Link

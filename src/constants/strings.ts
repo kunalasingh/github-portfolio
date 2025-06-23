@@ -1,7 +1,55 @@
-const strings: { [key: string]: string } = {
-  name: "Kunal Arunkumar Singh",
-  role: "Software Engineer",
-  summary: "I am a software engineer with expertise in frontend development and a proven track record of delivering innovative solutions across the Banking, Education, and Media domains, with aspirations to create transformative tools powered by AI.",
-  contactMe: 'CONTACT ME'
+const strings: { [key: string]: { [key: string]: string } } = {
+  profile: {
+    name: "Kunal Arunkumar Singh",
+    role: "Software Engineer",
+    summary:
+      "I am a software engineer with expertise in frontend development and a proven track record of delivering innovative solutions across the Banking, Education, and Media domains, with aspirations to create transformative tools powered by AI.",
+    contactMe: "CONTACT ME",
+  },
+  skill: {
+    skills: "Skills",
+  },
+  aboutMe: {
+
+  },
 };
-export default  strings;
+export const skills = [
+  "Java",
+  "C",
+  "Python",
+  "Javascript",
+  "LaTeX",
+  "HTML",
+  "CSS",
+  "ReactJS",
+  "Material-UI",
+  "jQuery",
+  "Bootstrap",
+  "Tailwind CSS",
+  "Gatsby",
+  "React Native",
+  "NodeJS",
+  "Spring Boot",
+  "ExpressJS",
+  "Jest",
+  "Enzyme",
+  "React Testing Library",
+  "JUnit",
+  "JWT",
+  "HTTP Cookies",
+  "Stripe",
+  "Plaid",
+  "Highcharts",
+  "Git",
+  "GitHub",
+  "CI/CD Pipelines",
+  "JIRA",
+  "Confluence",
+  "Gulp",
+  "Webpack",
+  "Redux",
+  "Postman",
+  "Babel",
+  "ESLint",
+];
+export default strings;

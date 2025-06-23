@@ -91,34 +91,49 @@ export const projects = [
     title: "crwn-clothing (E-commerce Platform)",
     description:
       "A full-stack e-commerce solution with React, Node.js, and MongoDB",
-    tech: "React",
+    tech: "react",
     link: "https://github.com/kunalasingh/crwn-clothing",
   },
   {
     title: "Task Management App",
     description: "A productivity app built with React Native and Firebase",
-    tech: "React Native",
+    tech: "reactNative",
     link: "#",
   },
   {
     title: "Data Visualization Dashboard",
     description: "An interactive dashboard using D3.js and Vue.js",
-    tech: "Vue.js",
+    tech: "vue",
     link: "#",
   },
   {
     title: "AI Chatbot",
     description:
       "A machine learning powered chatbot using Python and TensorFlow",
-    tech: "Python",
+    tech: "python",
     link: "#",
   },
 ];
 
 export const techColors = {
-  React: "bg-blue-500",
-  "React Native": "bg-green-500",
-  "Vue.js": "bg-purple-500",
-  Python: "bg-yellow-500",
+  react: {
+    color: "bg-blue-500",
+    name: "React",
+  },
+  reactNative: {
+    color: "bg-green-500",
+    name: "React Native",
+  },
+  vue: {
+    color: "bg-purple-500",
+    name: "Vue.js",
+  },
+  python: {
+    color: "bg-yellow-500",
+    name: "Python",
+  },
 };
+
+export type TechKey = keyof typeof techColors;
+
 export default strings;
